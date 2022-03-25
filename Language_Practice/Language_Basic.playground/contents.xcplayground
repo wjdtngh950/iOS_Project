@@ -4,6 +4,7 @@
         <page name='상수와 변수'/>
         <page name='기본 데이터 타입'/>
         <page name='컬렉션 타입'/>
-        <page name='조건문'/>
+        <page name='조건문'/>
+        <page name='반복문'/>
     </pages>
 </playground>
