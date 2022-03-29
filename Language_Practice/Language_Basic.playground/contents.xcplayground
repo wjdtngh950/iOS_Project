@@ -7,5 +7,6 @@
         <page name='조건문'/>
         <page name='반복문'/>
         <page name='Treatment'/>
+        <page name='03_25'/>
     </pages>
 </playground>
