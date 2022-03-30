@@ -77,7 +77,7 @@ arrayValue.insert(5, at: 2) // 특정 원소를 특정 자리에 넣기 (넣어�
 print(arrayValue)
 arrayValue.remove(at: 3) //특정 자리의 원소를 삭제 (at: 특정 자리)
 print(arrayValue)
-let reversedArray = arrayValue.reversed() // 원소들을 뒤집는것 
+let reversedArray = arrayValue.reversed() // 원소들을 뒤집는것
 print(arrayValue)
 arrayValue.removeAll()//그냥 싹다 지워버리고 싶다! //검색 개발 할때 사용!
 print(arrayValue)
