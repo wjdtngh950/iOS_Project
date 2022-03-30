@@ -67,7 +67,13 @@ someFunction("suho", "seungho") //hello suho! I'm seungho
 //타입이 다른 함수는 할당 할 수 없음
 //someFunction = sayHelloFriedns(me: friends:)
 
+func runAnother(function: (String, String) -> Void) {
+    function("suho", "seungho")
+}
 
+runAnother(function: greeting(friend:me:)) //hello suho! I'm seungho
+
+runAnother(function: someFunction) //hello suho! I'm seungho
 
 
 //: [Next](@next)
