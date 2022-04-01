@@ -154,6 +154,7 @@ print(tuple2.2)//false
 
 var gender: String = "남"
 
+
 if gender == "남" {
     print("남자입니다")
 } else if gender == "여" {
