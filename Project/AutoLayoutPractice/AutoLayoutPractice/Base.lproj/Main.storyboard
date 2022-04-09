@@ -32,6 +32,9 @@
                                 <rect key="frame" x="161.66666666666666" y="411.66666666666669" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmm-jL-VgK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,6 +50,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M5s-CC-lzR" secondAttribute="trailing" constant="10" id="yp2-sf-uO6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="hfh-9k-pjA" id="wu1-Md-q1U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
