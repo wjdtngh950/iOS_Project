@@ -5,13 +5,18 @@ import Foundation
 /*1번 문제 : 물건의 가격과 갯수를 입력 받아 총 판매액 리턴하는 프로그램을 작성하세요.
 var price: Int = 3000
 var cnt: Int = 2
-var sum: Int
 
-func getTotalPrice() {
-  price+cnt
-    print(price*cnt)
+func getTotalPrice() -> Int {
+  return price * cnt
+    
 }
-getTotalPrice()
+print(getTotalPrice())
+ 
+ MARK:-
+ func getTotalPrce(price: Int, count: Int) -> Int {
+ return price * count
+ }
+ print(getTotalPrce(price: 3000, count: 2)
 */
 
 /*2번 문제 :1번을 응용하여, 판매 수익을 출력하는 프로그램을 작성하시오. (판매 수익은 물건의 가격의 10% 입니다.)
@@ -23,18 +28,32 @@ func getAdvantage() -> Int{
     return (price*cnt/10)
 }
 print(getAdvantage())
+ 
+ MARK:-
+ 
+ func getTotalPrce(price: Int, count: Int) -> Int {
+ return price * cnt / 10
+ }
+ print(getTotalPrce(price: 3000, count: 2)
+ 
  */
 
 /*3번: Inch로 된 제품의 크기를 입력 받아 cm로 출력하는 프로그램을 작성하세요. ( 1inch = 2.54cm )
 입력은 함수의 인자(inch: Double)로 받습니다.
  
-var Inch: Double = 10
-var Cm: Double = 2.54
+var inch: Double = 10
+let cm: Double = 2.54
 
 func inchToCm() -> Double{
-    return Inch*Cm
+    return inch*cm
 }
 print(inchToCm())
+ 
+ MARK: -
+ func inchToCm(inch: Double) -> String {
+ return "\(inch * 2.54) cm"
+ print(inchToCm(inch: 3))
+ 
  */
 
 /* 4번:  학생의 국어, 수학, 영어, 과학 총 4과목의 성적이 주어진다.
