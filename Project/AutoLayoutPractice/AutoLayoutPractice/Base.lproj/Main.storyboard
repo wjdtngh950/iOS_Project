@@ -23,7 +23,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="수호" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5s-CC-lzR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="텍스트를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5s-CC-lzR">
                                 <rect key="frame" x="10" y="472.66666666666669" width="370" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -36,6 +36,16 @@
                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmm-jL-VgK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2g-Ck-UP1" userLabel="두번째 화면으로">
+                                <rect key="frame" x="10" y="536.66666666666663" width="370" height="31"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="두번째 화면으로"/>
+                                <connections>
+                                    <segue destination="tiS-v4-zmT" kind="show" id="3RG-kh-JS0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,20 +53,40 @@
                             <constraint firstItem="jrr-WC-gCd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3jX-VI-NXO"/>
                             <constraint firstItem="hfh-9k-pjA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="6Kv-12-xRL"/>
                             <constraint firstItem="hfh-9k-pjA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="9ws-I4-3Bf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N2g-Ck-UP1" secondAttribute="trailing" constant="10" id="IBz-bS-Gxv"/>
+                            <constraint firstItem="N2g-Ck-UP1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Kjx-yY-qna"/>
                             <constraint firstItem="M5s-CC-lzR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="M8y-4D-4mg"/>
                             <constraint firstItem="jrr-WC-gCd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qya-ae-dYT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hfh-9k-pjA" secondAttribute="trailing" constant="50" id="ehZ-CW-zlR"/>
                             <constraint firstItem="M5s-CC-lzR" firstAttribute="top" secondItem="jrr-WC-gCd" secondAttribute="bottom" constant="30" id="vuo-pf-Bhy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M5s-CC-lzR" secondAttribute="trailing" constant="10" id="yp2-sf-uO6"/>
+                            <constraint firstItem="N2g-Ck-UP1" firstAttribute="top" secondItem="M5s-CC-lzR" secondAttribute="bottom" constant="30" id="zK6-7F-ope"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentTextField" destination="M5s-CC-lzR" id="1Mf-eU-CK4"/>
                         <outlet property="titleLabel" destination="hfh-9k-pjA" id="wu1-Md-q1U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="97.393364928909946"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="43s-v3-WF4">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tiS-v4-zmT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wwc-Qy-fg2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Azy-Jm-s40"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u8y-qx-eoj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Qh-vY-XL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="97"/>
         </scene>
     </scenes>
     <resources>
@@ -65,6 +95,15 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
